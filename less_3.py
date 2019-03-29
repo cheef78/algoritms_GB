@@ -83,9 +83,46 @@ for el2 in range(0, (int(len(massiv))//10)):
             break
     print ('\n')
 
+print ('*'*80)
 
 
 
 print ('*'*80)
+print ('4. Определить, какое число в массиве встречается чаще всего.\n\n')
+massiv = []
+eqmassiv = []
+import random
+for el in range (0,50):
+    massiv.append(random.randint(1,10))
+for el in range (0,50):
+    numbs = massiv[el]
+    num = 0
+    for el1 in range (0,50):
+        if numbs == massiv[el1]:
+            num = num+1
+    eqmassiv.append(num)
+maxel = eqmassiv[0]
+posmaxel = 0
+for el1 in range (0,50):
+        if eqmassiv[el1] >= maxel:
+            maxel = el1
+print ('Исхоный массив чисел:')
+for el2 in range(0, (int(len(massiv))//10)):
+    for el1 in range (0,10):
+        print (massiv[10*el2+el1],';',sep='', end = '')
+        if (10*el2+el1)+1>= int(len(massiv)):
+            break
+    print ('\n')
+print ('Массив числа повторений:')
+for el2 in range(0, (int(len(massiv))//10)):
+    for el1 in range (0,10):
+        print (eqmassiv[10*el2+el1],';',sep='', end = '')
+        if (10*el2+el1)+1>= int(len(eqmassiv)):
+            break
+    print ('\n')
 
+
+print ("В исходном массиве чисел максимально повторяющееся число =  ", massiv[maxel])
+print ('*'*80)
+    
 
