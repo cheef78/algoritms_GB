@@ -23,8 +23,21 @@ for el in range (0,100):
 for el1 in range (0,100):
     if massiv[el1]%2==0:
         numbs.append(el1)
-print (massiv)
-print (numbs)
+print ('Исхоный массив чисел:')
+for el2 in range(0, (int(len(massiv))//10)):
+    for el1 in range (0,10):
+        print (massiv[10*el2+el1],';',sep='', end = '')
+    print ('\n')
+
+print ('массив индексов четных элементов исходного массива:')
+for el3 in range(0, (int(len(numbs))//10)+1):
+    for el4 in range (0,10):
+        
+        print (numbs[10*el3+el4],';',sep='', end = '')
+        if (10*el3+el4)+1>= int(len(numbs)):
+            break
+    print ('\n')
+            
 print ('*'*80)
 
 
